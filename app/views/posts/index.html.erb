@@ -1,6 +1,11 @@
 <br>
 <h1>Social Network</h1>
 <% @posts.each do |post| %>
-	<h3><%= post.title %></h3>
-	<p><%= post.body %></p>
+	<div class="well">
+		<div class="container">
+			<h3><%= post.title %></h3>
+			<p><%= post.body %></p>
+			<%= link_to "Read more", post_path(post), :class =>
+				'btn btn-light' %>
+		</div>
 <% end %>
