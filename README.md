@@ -1,24 +1,9 @@
 # SocialNetwork
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An in-progress social website.
 
-Things you may want to cover:
+Supports CRUD with
 
-* Ruby version
+* Posts
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Comments
