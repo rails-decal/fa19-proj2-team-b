@@ -4,5 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :dislikes
-  has_many :posts_disliked, through :dislikes, source :post
+  has_many :posts_disliked, through: :dislikes, source: :post
 end
