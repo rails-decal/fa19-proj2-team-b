@@ -2,7 +2,7 @@
 <% @post.comments.each do |comment| %>
 	<p>
 		<strong>
-			<%= comment.username%>
+			<%= current_user.username %>
 		</strong>: 
 		<%= comment.body %>
 		<%= link_to '[X]', [comment.post, comment], 
