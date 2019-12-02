@@ -1,12 +1,26 @@
 <br>
 <h1>Social Network</h1>
+
 <% @posts.each do |post| %>
 	<div class="well">
-		<div class="container">
+		<div style = "margin: 30px;
+									border-radius: 10px;
+  								border: 2px solid grey;" 
+				class="container">
 			<h3><%= post.title %></h3>
 			<h6><%= post.user.username %></h6>
 			<p><%= post.body %></p>
 			<%= link_to "Read more", post_path(post), :class =>
-				'btn btn-light' %>
+				'btn btn-outline-secondary btn-light' %>
+			<p></p>
 		</div>
 <% end %>
+
+<div id = "news">
+  <p>
+    <center>
+      <a class="twitter-timeline" data-width="1000" data-height="700" data-theme="light" data-link-color="#19CF86" href="https://twitter.com/social_team_b/lists/news?ref_src=twsrc%5Etfw">News</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </center>
+  </p>
+</div>
+
