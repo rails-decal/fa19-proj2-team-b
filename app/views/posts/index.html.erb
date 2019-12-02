@@ -8,7 +8,7 @@
   								border: 2px solid grey;" 
 				class="container">
 			<h3><%= post.title %></h3>
-			<h6><%= post.user.username %></h6>
+			<h6>User: <%= post.user.username %></h6>
 			<p><%= post.body %></p>
 			<% if false %>
 			<p> <% if not post.photo.attachment.nil? %>
