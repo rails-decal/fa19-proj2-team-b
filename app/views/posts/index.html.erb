@@ -6,6 +6,7 @@
 			<h3><%= post.title %></h3>
 			<h6><%= post.user.username %></h6>
 			<p><%= post.body %></p>
+			<%= link_to "Dislike (#{post.users_disliked.length})", dislike_path(post), method: :patch %>
 			<%= link_to "Read more", post_path(post), :class =>
 				'btn btn-light' %>
 		</div>

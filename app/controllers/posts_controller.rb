@@ -40,6 +40,14 @@ class PostsController < ApplicationController
 		redirect_to posts_path
 	end
 
+	def dislike
+		@post = Post.find(params[:id])
+		if (current_user != nil)
+			@dislike = Dislike.where(user: current_user, post: @post).first_or_create
+		end
+		redirect_to posts_path
+	end
+
 	private def post_params
 		params.require(:post).permit(:title, :body)
 	end
