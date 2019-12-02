@@ -2,6 +2,10 @@
 <html>
   <head>
     <title>Fa19Proj2TeamB</title>
+    <%# <link rel = "stylesheet" href = "social.css"> %>
+    <%# <%= stylesheet_link_tag "application.css" %> 
+    <%#%%>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' %>
@@ -17,24 +21,39 @@
 
       <div class="collapse navbar-collapse" id="navbarsExample02">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"><%= link_to "Home", home_path %></li>
+          <li class="nav-item active"><%= link_to "Home", home_path, :class =>
+				'btn btn-light' %></li>
         </ul>
-        <ul class="nav navbar-light navbar-right">
-          <li class="nav-item"><%= link_to "Create Post", new_post_path %></li>
-        </ul>
+        <% if user_signed_in? %>
+          <div style="padding-right: 10px" class="info">
+              Logged in as <strong><%= current_user.username %> </strong>
+          </div>
+          <div style="padding-right: 10px">
+          <%= link_to 'Edit profile ', edit_user_registration_path, :class =>
+				'btn btn-light' %>
+          </div>
+          <div style="padding-right: 10px">
+          <%= link_to "Logout ", destroy_user_session_path, method: :delete, :class =>
+				'btn btn-light' %>
+          </div>
+          
+          <ul class="nav navbar-light navbar-right">
+            <li class="nav-item"><%= link_to "Create Post", new_post_path, :class =>
+				'btn btn-light' %></li>
+          </ul>
+        <% else %>
+        <div style="padding-right: 10px">
+          <%= link_to "Sign up", new_user_registration_path, :class =>
+				'btn btn-light' %>
+        </div>
+        <div style="padding-right: 10px">
+          <%= link_to "Login", new_user_session_path, :class =>
+				'btn btn-light' %>
+        </div>
+        <% end %>
       </div>
     </nav>
-    <% if user_signed_in? %>
-        <p class="info">
-            Logged in as <strong><%= current_user.email %></strong>.
-        </p>
-        <%= link_to 'Home 🏠', root_path %>
-        <%= link_to 'Edit profile', edit_user_registration_path%>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to "Sign up", new_user_registration_path  %>
-        <%= link_to "Login", new_user_session_path %>
-      <% end %>
+   
     <div class="container">
       <%= yield %>
     </div>
