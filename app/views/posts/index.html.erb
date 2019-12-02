@@ -10,6 +10,10 @@
 			<h3><%= post.title %></h3>
 			<h6><%= post.user.username %></h6>
 			<p><%= post.body %></p>
+			<p> <% if not post.photo.attachment.nil? %>
+          			<%= image_tag post.photo, style: 'max-width: 500px' %>
+        		<% end %>
+        	</p>
 			<%= link_to "Dislike (#{post.users_disliked.length})", dislike_path(post), method: :patch %>
 			<%= link_to "Read more", post_path(post), :class =>
 				'btn btn-outline-secondary btn-light' %>

@@ -17,6 +17,9 @@
 	</p>
 
 	<p>
+		<%= f.file_field :photo, accept: "image/png,image/gif,image/jpeg" %>
+	</p>
+	<p>
 		<%= f.submit({:class => 'btn btn-primary'}) %>
 	</p>
 <% end %>
