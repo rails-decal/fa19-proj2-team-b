@@ -16,8 +16,8 @@ local:
 #   bucket: your_own_bucket
 amazon:
   service: S3
-  access_key_id: AKIAJ75ZFOBEXSKZNHJA
-  secret_access_key: /RjsCKydXuU8Yh+s/Skreax73cvVRrMwwRM1sL6x
+  access_key_id: 
+  secret_access_key: 
   region: us-east-2
   bucket: notyourusualinstagram3
   
