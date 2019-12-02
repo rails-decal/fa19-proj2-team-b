@@ -14,12 +14,12 @@ local:
 #   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
 #   region: us-east-1
 #   bucket: your_own_bucket
-amazon:
-  service: S3
-  access_key_id: AKIAIUNY67UZSS7D7JAQ
-  secret_access_key: 1UG1NSrYqEamqsBhzqYX8FtRcIY++uMih3/fZW2N
-  region: us-east-2
-  bucket: notyourusualinstagram
+# amazon:
+#   service: S3
+#   access_key_id: AKIAJHXMKRNW4RQEYFEQ #AKIASBAK4UNM7RNP5BDS #AKIASBAK4UNM7RNP5BDS #AKIAIUNY67UZSS7D7JAQ #AKIASBAK4UNMS6EIFXWS #
+#   secret_access_key: 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 #UG1NSrYqEamqsBhzqYX8FtRcIY++uMih3/fZW2N #32AEBSPX2JiCAOeMqbRshD0Wz7HFUIuHLWA0TUBW #1
+#   region: us-east-2
+#   bucket: notyourusualinstagram
   
 # Remember not to checkin your GCS keyfile to a repository
 # google:
