@@ -5,5 +5,5 @@ class Post < ApplicationRecord
 	has_many :users_disliked, through: :dislikes, source: :user
 	validates :title, presence: true,
 						length: {minimum: 3}
-	#has_one_attached :photo
+	has_one_attached :photo
 end
