@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 	def about
 		@title = "About us"
-		@content = 'This is the about page.'
+		@content = 'Created by: Sebastian Reyes, Adina Chen, Andrew Chen, Amy Doo, and Winnie Wu. '
 	end
 end
